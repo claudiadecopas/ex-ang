@@ -7,7 +7,7 @@ import { RestritoComponent } from './restrito/restrito.component';
 const routes: Routes = [
   {path:'inicio', component: InicioComponent},
   {path:'login', component: LoginComponent},
-  {path: 'restrito',component: RestritoComponent},
+  {path: 'restrito',component: RestritoComponent, canActivate: [GuardGuard]},
   {path:'', redirectTo:'/inicio',pathMatch:'full'}
 ];
 
